@@ -1,0 +1,24 @@
+Steps to start kafka server
+
+
+Start Zookeeper:
+cd C:\kafka\kafka_2.13-3.8.0
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+
+
+Start Kafka Server:
+cd C:\kafka\kafka_2.13-3.8.0
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+Create Kafka Topic:
+cd C:\kafka\kafka_2.13-3.8.0
+.\bin\windows\kafka-topics.bat --create --topic product-events --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+Verify Topic:
+cd C:\kafka\kafka_2.13-3.8.0
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+Run the Application
